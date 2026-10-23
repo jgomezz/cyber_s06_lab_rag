@@ -53,7 +53,7 @@ def chat(prompt: str, provider: str | None = None, system: str | None = None,
     if json_mode:
         kwargs["response_format"] = {"type": "json_object"}
     try:
-        resp = litellm.completion(messages=messages, temperature=temperature, timeout=timeout, **kwargs)
+        resp = litellm.completion(messages=messages, temperature=temperature, timeout=timeout, num_retries=3, **kwargs)
     except litellm.BadRequestError as e:
         # Algunos proveedores no aceptan response_format: se reintenta sin él (el prompt ya pide JSON)
         if not json_mode or "response_format" not in str(e).lower() and "json" not in str(e).lower():

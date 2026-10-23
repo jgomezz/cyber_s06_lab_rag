@@ -121,8 +121,11 @@ python escalon_2_rag.py --pregunta "¿Qué debe contener el documento de segurid
 
 ```bash
 python escalon_3_brechas.py --proveedor ollama_cloud
-python escalon_3_brechas.py --proveedor mistral
-python escalon_3_brechas.py --comparar salidas/matriz_brechas_ollama_cloud.xlsx salidas/matriz_brechas_mistral.xlsx
+python escalon_3_brechas.py --proveedor nvidia
+python escalon_3_brechas.py --comparar salidas/matriz_brechas_ollama_cloud.xlsx salidas/matriz_brechas_nvidia.xlsx
+
+python escalon_3_brechas.py --proveedor groq
+
 ```
 
 Para cada requisito, el script recupera los fragmentos más parecidos de la política anonimizada, pide al modelo un JSON con estado, evidencia, brecha y recomendación, lo valida con Pydantic y comprueba si la evidencia citada **existe textualmente** en la política.
