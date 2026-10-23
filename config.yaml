@@ -1,0 +1,44 @@
+# Clase 6 · Configuración del laboratorio
+# Para cambiar de modelo, edita solo "model". El proveedor por defecto se usa
+# cuando no indicas --proveedor al ejecutar un escalón.
+default: ollama_cloud
+
+providers:
+  ollama_cloud:          # PRINCIPAL del curso: modelos grandes en ollama.com (cuenta gratuita, 1 consulta a la vez)
+    model: openai/gpt-oss:120b
+    api_base: https://ollama.com/v1
+    api_key_env: OLLAMA_API_KEY
+
+  groq:                  # console.groq.com · rápido y con herramientas: el segundo modelo de las comparaciones
+    model: groq/qwen/qwen3.8-27b
+    api_key_env: GROQ_API_KEY
+
+  mistral:               # API de Mistral, plan gratuito (solo datos sintéticos o anonimizados)
+    model: mistral/mistral-small-latest
+    api_key_env: MISTRAL_API_KEY
+
+  nvidia:                # build.nvidia.com · modelo pequeño (8B): sirve para comparar con uno grande
+    model: openai/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning
+    api_base: https://integrate.api.nvidia.com/v1
+    api_key_env: NVIDIA_API_KEY
+
+  ollama_local:          # OPCIONAL: solo si tu equipo tiene 16 GB de RAM o GPU ("ollama pull llama3.2:3b")
+    model: ollama/llama3.2:3b
+    api_base: http://localhost:11434
+
+# Embeddings para el RAG (escalones 2 y 3).
+# mistral -> en la nube, usa MISTRAL_API_KEY (por defecto; solo se indexa texto anonimizado o público)
+# ollama  -> OPCIONAL, local: requiere "ollama pull nomic-embed-text"
+embeddings:
+  provider: mistral
+  ollama_model: nomic-embed-text
+  ollama_base: http://localhost:11434
+  mistral_model: mistral-embed
+
+# Escalón 1: modelo de lenguaje de spaCy para detectar nombres y lugares en español
+anonimizacion:
+  spacy_model: es_core_news_md
+  # Palabras que el modelo de spaCy confunde con nombres de persona (falsos positivos).
+  # Agrega las que encuentres y vuelve a ejecutar el escalón 1.
+  permitidos:
+    - Directorio

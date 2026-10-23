@@ -1,0 +1,18 @@
+[
+  {"id": "R01", "articulo": "Art. 34.1", "requisito": "Notificar a la Autoridad Nacional de Protección de Datos Personales los incidentes de seguridad de datos personales relevantes dentro de las 48 horas de conocerlos."},
+  {"id": "R02", "articulo": "Art. 34.3", "requisito": "Comunicar el incidente a los titulares de los datos afectados dentro de las 48 horas, en lenguaje sencillo y claro, con las medidas adoptadas."},
+  {"id": "R03", "articulo": "Art. 34.5", "requisito": "Cuando el incidente ocurre en el entorno digital, notificar además al Centro Nacional de Seguridad Digital."},
+  {"id": "R04", "articulo": "Art. 35", "requisito": "Documentar todo incidente de seguridad: hechos, efectos y medidas adoptadas."},
+  {"id": "R05", "articulo": "Art. 37", "requisito": "Designar formalmente a un Oficial de Datos Personales."},
+  {"id": "R06", "articulo": "Art. 46.1 a)", "requisito": "Gestionar los accesos desde el alta hasta la baja del usuario, incluyendo vacaciones y permisos esporádicos."},
+  {"id": "R07", "articulo": "Art. 46.1 c)", "requisito": "Verificar los privilegios asignados a los usuarios al menos cada seis meses (semestralmente)."},
+  {"id": "R08", "articulo": "Art. 46.1 b) y d)", "requisito": "Contar con procedimientos de identificación y mecanismos de autenticación (contraseñas, certificados, tokens u otros)."},
+  {"id": "R09", "articulo": "Art. 46.2", "requisito": "Monitorear y revisar periódicamente las medidas de seguridad y capacitar al personal según sus roles en el tratamiento de datos personales."},
+  {"id": "R10", "articulo": "Art. 46.3", "requisito": "Registrar las interacciones con datos personales (accesos, sesiones y acciones) y conservar esos registros al menos dos años."},
+  {"id": "R11", "articulo": "Art. 46.4", "requisito": "Aprobar y establecer formalmente cualquier uso de mensajería instantánea, correo o redes sociales no institucionales."},
+  {"id": "R12", "articulo": "Art. 47.3", "requisito": "Mantener un inventario de datos personales y de los sistemas que los tratan, indicando si son datos sensibles."},
+  {"id": "R13", "articulo": "Art. 51.1", "requisito": "Realizar copias de respaldo al menos semanales, con medidas de seguridad para su almacenamiento y transferencia."},
+  {"id": "R14", "articulo": "Art. 51.2", "requisito": "Verificar la integridad de las copias de respaldo, incluyendo pruebas de recuperación completa."},
+  {"id": "R15", "articulo": "Art. 52", "requisito": "Transferir datos personales fuera de las instalaciones solo con autorización y por medios cifrados o equivalentes."},
+  {"id": "R16", "articulo": "Arts. 49 y 50", "requisito": "Mantener áreas y equipos seguros: control de ingreso, protección de equipos, borrado seguro y escritorio limpio."}
+]
